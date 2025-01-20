@@ -1,3 +1,5 @@
+package com.ttt.training.register.entity;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +23,8 @@ public class FormData {
 	private String courseDetails;
 	private double cgpa;
 	private int year;
+	
+	
 	
 
 }

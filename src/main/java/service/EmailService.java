@@ -1,3 +1,5 @@
+package com.ttt.training.register.service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -29,6 +31,9 @@ public class EmailService {
 				+ "</td>" + "<td>" + "<a href='http://localhost:8080/api/reject?email=" + formData.getEmail()
 				+ "' style='background-color: #f44336; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 5px;'>Reject</a>"
 				+ "</td>" + "</tr>" + "</table>";
+
+//				+ "<a href='http://localhost:8080/api/approve?email=" + formData.getEmail() + "'>Accept</a><br>"
+//				+ "<a href='http://localhost:8080/api/reject?email=" + formData.getEmail() + "'>Reject</a>";
 
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
